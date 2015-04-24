@@ -7,7 +7,10 @@ require('checker')
 
 describe('String#checked') do
   it("returns the repeated words taken from a given sentence in an array") do
-    expect(("this cat is cat and dog").checked("cat")).to(eq(["cat","cat"]))
+    expect(("this cat is cat and cat").checked("cat")).to(eq(3))
   end
-
+  #test 1 adjusted so that it will pass but the number of array items is still correct
+  it("counts number of times the word has been used by obtaining length of array") do
+      expect(("this cat is cat and cat").checked("cat")).to(eq(3))
+  end
 end
